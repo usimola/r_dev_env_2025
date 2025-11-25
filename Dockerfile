@@ -1,7 +1,7 @@
-# Get a base image with R version 4.4.3.
-# Base image built on February 28, 2025
+# Get a base image with R version 4.5.2.
+# Base image built on October 31, 2025
 # https://hub.docker.com/r/rocker/r-ver/tags
-FROM rocker/r-ver@sha256:7f54f1c8f6f481c5f49ef368932c9e7685142883478e70697c088be697872a31
+FROM rocker/r-ver@sha256:d4799adb379f39c57dc1988bacb45d63d2f51af9e3448866d16d371844dadcf5
 
 RUN apt-get update && apt-get install -y \
     libglpk-dev \
@@ -36,4 +36,4 @@ RUN apt-get update && apt-get install -y \
 
 RUN R -e "install.packages('remotes')"
 
-RUN R -e "remotes::install_github('rstudio/renv@v1.1.4')"
+RUN R -e "remotes::install_github('rstudio/renv@v1.1.5')"
