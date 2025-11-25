@@ -10,7 +10,7 @@ jobs:
   docker:
     runs-on: ubuntu-latest
     env:
-      IMAGE_NAME: r_dev_4.4.3
+      IMAGE_NAME: r_dev_4.5.2
     steps:
       - name: Setup
         uses: docker/setup-buildx-action@v3
